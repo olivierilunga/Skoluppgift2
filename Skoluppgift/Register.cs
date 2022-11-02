@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace Skoluppgift
 {
-    public class Employees
+    public class Register
     {
         private string _name;
         private decimal _salary;
 
-        private readonly List<string>? _employeeNames = new List<string>();
-        private readonly List<decimal> _employeeSalaries = new List<decimal>();
+        private readonly List<string>? _names = new List<string>();
+        private readonly List<decimal> _salaries = new List<decimal>();
 
         public string Name { get => _name; set => _name = value; }
         public decimal Salary { get => _salary; set => _salary = value; }
 
 
-        public Employees()
+        public Register()
         {
 
         }
@@ -36,7 +36,7 @@ namespace Skoluppgift
                 throw new ArgumentNullException(nameof(addName));
             }
             _name = addName;
-            _employeeNames?.Add(_name);
+            _names?.Add(_name);
 
         }
         public void AddEmployeeSalary(decimal addSalary)
@@ -48,15 +48,15 @@ namespace Skoluppgift
                 throw new ArgumentNullException(nameof(addSalary));
             }
             _salary = addSalary;
-            _employeeSalaries.Add(_salary);
+            _salaries.Add(_salary);
         }
         public void GetEmployeeInformation()
         {
-            foreach (var name in _employeeNames)
+            foreach (var (name, salary) in from name in _names
+                                           from salary in _salaries
+                                           select (name, salary))
             {
-                foreach (var salary in _employeeSalaries)
-                    Console.Write($"Employee: {name.ToLower()} has salary: {salary.ToString("C")}\n");
-
+                Console.Write($"Employee: {name.ToLower()} has salary: {salary.ToString("C")}\n");
             }
         }
     }
