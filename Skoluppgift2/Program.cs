@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Manu manu = new Manu();
-            string off = "Q";
+           // string off = "Q";
             do
             {
                 manu.MainMenu();

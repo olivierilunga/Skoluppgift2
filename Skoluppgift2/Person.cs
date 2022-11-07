@@ -9,6 +9,7 @@ namespace Skoluppgift2
     public enum Person
     {
         Youth,
+        Adult,
         Pensioner
     }
 }
