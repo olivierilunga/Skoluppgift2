@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,8 @@ namespace Skoluppgift2
         int currentPrice = 0;
         int _totalPrice = 0;
         int customers = 0;
-        //Manu manu = new Manu();
+
+        Manu manu = new Manu();
 
         public int TotalPrice()
         {
@@ -57,6 +59,7 @@ namespace Skoluppgift2
                     continue;
                 }
                 Console.WriteLine("$the total price is: {0}", _totalPrice.ToString("C"));
+                Console.Clear();
             }
 
             return _totalPrice;
@@ -71,19 +74,21 @@ namespace Skoluppgift2
                 if (user <= 20)
                 {
                     Console.WriteLine($"{Person.Youth}\nPrice: {_youthPrice.ToString("C")}");
+                    Console.Clear();
                     break;
                 }
                 else if (user >= 64)
                 {
                     Console.WriteLine($"{Person.Pensioner}\nPrice: {_pensionerPrice.ToString("C")}");
+                    Console.Clear();
                     break;
                 }
                 else
                 {
                     Console.WriteLine($"{Person.Adult}\nPrice: {_adultPrice.ToString("C")}");
+                    Console.Clear();
                     break;
                 }
-                //manu.MainMenu();
             }
         }
         private void CompanyPrice()

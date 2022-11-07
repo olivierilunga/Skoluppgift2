@@ -6,10 +6,10 @@
         {
             Manu manu = new Manu();
            // string off = "Q";
-            do
-            {
+            //do
+            //{
                 manu.MainMenu();
-            } while (true);
+            //} while (true);
         }
     }
 }
