@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skoluppgift", "Skoluppgift\Skoluppgift.csproj", "{5E7F1F62-050C-4DA5-B5D0-729EA03B2931}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skoluppgift", "Skoluppgift\Skoluppgift.csproj", "{5E7F1F62-050C-4DA5-B5D0-729EA03B2931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skoluppgift2", "Skoluppgift2\Skoluppgift2.csproj", "{ED15BBC1-A245-48BF-A315-2FB45230AEA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5E7F1F62-050C-4DA5-B5D0-729EA03B2931}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E7F1F62-050C-4DA5-B5D0-729EA03B2931}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E7F1F62-050C-4DA5-B5D0-729EA03B2931}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED15BBC1-A245-48BF-A315-2FB45230AEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED15BBC1-A245-48BF-A315-2FB45230AEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED15BBC1-A245-48BF-A315-2FB45230AEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED15BBC1-A245-48BF-A315-2FB45230AEA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

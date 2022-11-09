@@ -8,56 +8,38 @@ namespace Skoluppgift
 {
     public class Register
     {
-        private string _name;
-        private decimal _salary;
+        private readonly List<Employee> _employees = new();
 
-        private readonly List<string>? _names = new List<string>();
-        private readonly List<decimal> _salaries = new List<decimal>();
-
-        public string Name { get => _name; set => _name = value; }
-        public decimal Salary { get => _salary; set => _salary = value; }
-
-
-        public Register()
+        public void AddEmployee(string name, decimal salary)
         {
+            if (name is null && salary! >= 0)
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+            Employee emp = new(name, salary);
+
+            _employees?.Add(emp);
 
         }
-        //public Employees(string name, decimal salary)
+        public void AddEmployee(Employee emp)
+        {
+            if (emp.Name is not null && emp.Salary! <= 0)
+            {
+                throw new ArgumentNullException(nameof(emp));
+            }
+            _employees?.Add(emp);
+
+        }
+
+        public void TestData()
+        {
+            //_employees.Add("nils", 222);
+        }
+        //public IEnumerable<Employee> GetEmployeesInformation()
         //{
-        //    Name = name;
-        //    Salary = salary;
-        //}
-
-        public void AddNEmployeeName(string addName)
-        {
-
-            if (addName is null)
-            {
-                throw new ArgumentNullException(nameof(addName));
-            }
-            _name = addName;
-            _names?.Add(_name);
-
-        }
-        public void AddEmployeeSalary(decimal addSalary)
-        {
-
-
-            if (addSalary < 0)
-            {
-                throw new ArgumentNullException(nameof(addSalary));
-            }
-            _salary = addSalary;
-            _salaries.Add(_salary);
-        }
-        public void GetEmployeeInformation()
-        {
-            foreach (var (name, salary) in from name in _names
-                                           from salary in _salaries
-                                           select (name, salary))
-            {
-                Console.Write($"Employee: {name.ToLower()} has salary: {salary.ToString("C")}\n");
-            }
-        }
+        //    return _employees.ToArray();
+        //}   
+        public List<Employee> GetEmployeesInformation() => _employees.ToList();
+        
     }
 }
