@@ -7,10 +7,11 @@ using System;
 
 try
 {
-    //var person = new Person("Scott", null, 25, 160, 60);
+    //var pe = new Person("Scott", "Hanselman", 25, 160, 60);
     // var person = new Person(null, null, -2, -1, -1);
-    var person = new Person();
-    Console.WriteLine($"Första namn: {person}");
+    PersonHandler p = new();
+    p.CreatePerson(4, "Kif", "Did", 44, 60);
+    p.SetFirstName(pe, "Idiot");
 }
 catch (ArgumentException ex)
 {

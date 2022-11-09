@@ -10,9 +10,9 @@ namespace Skoluppgift3
     {
         public Person CreatePerson(int age, string fname, string lname, double height, double weight)
         {
-            Person person = new Person();
+            Person person = new();
             return person;
-            
+
         }
         public void SetAge(Person pers, int age)
         {
@@ -26,5 +26,14 @@ namespace Skoluppgift3
         {
             pers.LName = lastName;
         }
+        public void SetHeight(Person pers, double height)
+        {
+            pers.Height = height;
+        }
+        public void SetWeight(Person pers, double weight)
+        {
+            pers.Weight = weight;
+        }
+        
     }
 }
