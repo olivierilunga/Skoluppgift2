@@ -10,9 +10,9 @@ public class Person
 {
     private int _age;
     private string? _fName;
-    private string? _lastName;
-    private int _height;
-    private int _weight;
+    private string? _lName;
+    private double _height;
+    private double _weight;
 
     public int Age
     {
@@ -21,7 +21,7 @@ public class Person
         {
             if (value < 0)
             {
-                throw new ArgumentException(nameof(value), "Persons age can't be lesser than 0");
+                throw new ArgumentException(nameof(value), "Persons age can only be older than 0");
             }
             _age = value;
         }
@@ -31,31 +31,75 @@ public class Person
         get => _fName;
         set
         {
-            if ((value?.Length < 2 || value?.Length > 10) || value?.Length != null)
+            if (value?.Length < 2)
             {
-                _fName = value;
+                throw new ArgumentException(nameof(value), "First name can't be lesser than 2 letters");
             }
-            throw new ArgumentNullException(nameof(value), "First name can't be null or lesser than 2 letters");
+            if (value?.Length > 10)
+            {
+                throw new ArgumentException(nameof(value), "First name can't have more than 10 letters");
+            }
+            if (value == null)
+            {
+                throw new ArgumentNullException(nameof(value), "First name can't be null letters");
+            }
+            _fName = value;
         }
     }
-    public string? LastName { get => _lastName; set => _lastName = value; }
-    public int Height { get => _height; set => _height = value; }
-    public int Weight { get => _weight; set => _weight = value; }
+    public string? LName
+    {
+        get => _lName;
+        set
+        {
+            if (value?.Length < 3)
+            {
+                throw new ArgumentException(nameof(value), "Last name can't be lesser than 2 letters");
+            }
+            if (value?.Length > 15)
+            {
+                throw new ArgumentException(nameof(value), "Last name can't have more than 10 letters");
+            }
+            if (value == null)
+            {
+                throw new ArgumentNullException(nameof(value), "Last name can't be null letters");
+            }
+            _lName = value;
+        }
+    }
+    public double Height
+    {
+        get => _height;
+        set
+        {
+            if (value < 30)
+            {
+                throw new ArgumentException(nameof(value), "Persons height can't be lesser than 30 cm");
+            }
+            _height = value;
+        }
+    }
+    public double Weight
+    {
+        get => _weight;
+        set
+        {
+            if (value < 40)
+            {
+                throw new ArgumentException(nameof(value), "Persons can't weight lesser than 20 kg");
+            }
+            _weight = value;
+        }
+    }
 
 
     public Person()
     {
     }
-    public Person(int age, string? fName, string? lastName, int height, int weight)
+    public Person(string? firstName, string? lastName, int age, double height, double weight)
     {
         Age = age;
-        FName = fName;
-        LastName = lastName;
-        Height = height;
-        Weight = weight;
-        Age = age;
-        FName = fName;
-        LastName = lastName;
+        FName = firstName;
+        LName = lastName;
         Height = height;
         Weight = weight;
     }

@@ -2,7 +2,18 @@
 using Skoluppgift3;
 using System;
 
-var person = new Person(0, "goda", "Godare", 160, 60);
 
-person.FName = "Test";
-Console.WriteLine($"Första namn: {person.FName}");
+//person.FName = "Test";
+
+try
+{
+    //var person = new Person("Scott", null, 25, 160, 60);
+    // var person = new Person(null, null, -2, -1, -1);
+    var person = new Person();
+    Console.WriteLine($"Första namn: {person}");
+}
+catch (ArgumentException ex)
+{
+
+    throw new ArgumentException(ex.Message);
+}
