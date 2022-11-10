@@ -8,7 +8,7 @@ namespace Skoluppgift3
 {
     internal abstract class UserError
     {
-        protected UserError() { }
+        //protected UserError() { }
 
         public abstract string UEMessage();
          

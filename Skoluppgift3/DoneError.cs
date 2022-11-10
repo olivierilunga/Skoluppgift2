@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Skoluppgift3
 {
-    internal class NumericInputError : UserError
+    internal class DoneError : UserError
     {
         public override string UEMessage()
         {
-            throw new ArgumentException("You tried to use a numeric only field. This fired an error!");
+            throw new Exception("You are not done yet!");
         }
     }
 }

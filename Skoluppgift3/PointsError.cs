@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Skoluppgift3
 {
-    internal class NumericInputError : UserError
+    internal class PointsError : UserError
     {
         public override string UEMessage()
         {
-            throw new ArgumentException("You tried to use a numeric only field. This fired an error!");
+            throw new Exception("You added wrong points!");
         }
     }
 }
