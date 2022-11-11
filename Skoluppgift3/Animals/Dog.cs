@@ -13,10 +13,14 @@ namespace Skoluppgift3.Animals
         {
             this.race = race;
         }
-
-        public override string DoSound(string sounds)
+        public override string Stats(int age, string name, double weight, string description)
         {
-            sounds = "Wooff!".ToUpper();
+            return base.Stats(age, name, weight, description);
+        }
+
+        public override string DoSound()
+        {
+            string sounds = "Wooff!".ToUpper();
             return sounds;
         }
     }

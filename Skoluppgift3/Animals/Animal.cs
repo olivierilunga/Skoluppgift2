@@ -23,10 +23,14 @@ namespace Skoluppgift3.Animals
             Description = description;
         }
 
-        public virtual string Stats()
+        public virtual string Stats(int age, string name, double weight, string description)
         {
-            return Description;
+            Age = age;
+            Name = name;
+            Weight = weight;
+            Description = description;
+            return string.Format("Age: {0} Name: {1} Weight: {2} Description: {3}", Age.ToString(), Name, Weight, Description);
         }
-        public abstract string DoSound(string sounds);
+        public abstract string DoSound();
     }
 }

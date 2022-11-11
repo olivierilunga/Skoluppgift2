@@ -14,9 +14,13 @@ namespace Skoluppgift3.Animals
             IsWithThePac = isWithThePac;
         }
 
-        public override string DoSound(string sounds)
+        public override string Stats(int age, string name, double weight, string description)
         {
-            sounds = "AAhooo!".ToUpper();
+            return base.Stats(age, name, weight, description);
+        }
+        public override string DoSound()
+        {
+            string sounds = "AAhooo!".ToUpper();
             return sounds;
         }
     }

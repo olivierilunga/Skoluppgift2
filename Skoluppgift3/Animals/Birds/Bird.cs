@@ -17,9 +17,9 @@ namespace Skoluppgift3.Animals.Birds
             WingSpan = wingSpan;
         }
 
-        public override string DoSound(string sounds)
+        public override string DoSound()
         {
-            sounds = "Piippii";
+            string sounds = "Piippii";
             return sounds;
         }
     }

@@ -14,9 +14,13 @@ namespace Skoluppgift3.Animals
             _speedPerHour = speedPerHour;
         }
 
-        public override string DoSound(string sounds)
+        public override string Stats(int age, string name, double weight, string description)
         {
-            sounds = "iieehhheeeee".ToUpper();
+            return base.Stats(age, name, weight, description);
+        }
+        public override string DoSound()
+        {
+            string sounds = "iieehhheeeee".ToUpper();
             return sounds;
         }
     }

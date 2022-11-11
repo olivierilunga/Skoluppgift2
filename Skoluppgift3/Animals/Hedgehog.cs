@@ -13,10 +13,14 @@ namespace Skoluppgift3.Animals
         {
             _nrOfSpikes = nrOfSpikes;
         }
-
-        public override string DoSound(string sounds)
+        public override string Stats(int age, string name, double weight, string description)
         {
-            sounds = "ssnnoooorrrg!";
+            return base.Stats(age, name, weight, description);
+        }
+
+        public override string DoSound()
+        {
+            string sounds = "ssnnoooorrrg!";
             return sounds;
         }
     }

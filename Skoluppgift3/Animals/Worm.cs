@@ -14,9 +14,13 @@ namespace Skoluppgift3.Animals
             IsPoisonous = isPoisonous;
         }
 
-        public override string DoSound(string sounds)
+        public override string Stats(int age, string name, double weight, string description)
         {
-            sounds = "sssssssss".ToUpper();
+            return base.Stats(age, name, weight, description);
+        }
+        public override string DoSound()
+        {
+            string sounds = "sssssssss".ToUpper();
             return sounds;
         }
     }
