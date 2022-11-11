@@ -8,7 +8,7 @@ namespace Skoluppgift3
 {
     interface IPerson
     {
-        void Talk(string talks);
+       public void Talk(string talks);
 
     }
 }

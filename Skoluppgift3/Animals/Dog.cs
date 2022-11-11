@@ -23,5 +23,10 @@ namespace Skoluppgift3.Animals
             string sounds = "Wooff!".ToUpper();
             return sounds;
         }
+        public string Walk()
+        {
+            // kommer inte åt den ur animal listan
+            return "Dog walking";
+        }
     }
 }

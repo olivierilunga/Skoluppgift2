@@ -6,10 +6,13 @@ using System;
 
 //person.FName = "Test";
 
-internal class Program : IPerson
+internal class Program
 {
+
+
     private static void Main(string[] args)
     {
+
         //try
         //{
         Person pers = new Person();
@@ -57,7 +60,10 @@ internal class Program : IPerson
 
         //    throw new ArgumentException(ex.Message);
         //}
+        //Wolfman wolfman = new Wolfman.Talk();
+
         List<Animal> animals = new()
+
 {
     new Dog(4, "Dog",45, "Black","Bulldog"),
     new Horse(10, "Horce",100, "Black",120),
@@ -65,30 +71,40 @@ internal class Program : IPerson
     new Wolfman(36, "Dill", 90, "scaarryy", false)
 };
 
+        //foreach (Animal animal in animals.Walk())
+        //{
+
+        //    if (animals.Contains(Dog))
+        //    {
+        //        Console.WriteLine($"Animal: {animal},\t sounds: {IPerson.Talk}");
+        //    }
+
+        //    Console.WriteLine($"Animal: {animal.Name},\t sounds: {animal.DoSound()}");
+        //}
+
+
         foreach (Animal animal in animals)
         {
-
-            //if (animals.Contains(new Wolfman((36, "Dill", 90, "scaarryy", false))))
-            //{
-            //  //  Console.WriteLine($"Animal: {animal},\t sounds: {(Talk("Hello world!"))}");
-            //}
-
-            Console.WriteLine($"Animal: {animal.Name},\t sounds: {animal.DoSound()}");
-            Console.WriteLine($"Stas {animal.Stats(30, "Worm", 50, "Black")}");
+            //vi skriver över värdet i propertyn. Varje gång vi anropar Stats() metoden och sätter ett ny värde
+            Console.WriteLine($"\n\nStas {animal.Stats(40, "BigWorm", 70, "Yellow")}");
         }
-    }
 
-    public void Talk(string talks)
-    {
+        //foreach (var dog in animals)
+        //{
+        //    if (dog.Equals(new Dog()))
+        //    {
+        //        Console.WriteLine("");
+        //    }
+        //    Console.WriteLine(dog);
+        //}
 
+        // för hästar ärver inte från hundar
+        // List av animals för att man ska kunna lägga till olika typer av djur i listan eller objecr lista
+
+        //List<Dog> dogs = new List<Dog>
+        //{
+        //    new Horse(4,"Hybrid", 150, "uknown", 200)
+        //};
+        //dogs.Add(new Horse(4, "Hybrid", 150, "uknown", 200));
     }
 }
-
-// för hästar ärver inte från hundar
-// List av animals för att man ska kunna lägga till olika typer av djur i listan
-
-//List<Dog> dogs = new List<Dog>
-//{
-//    new Horse(4,"Hybrid", 150, "uknown", 200)
-//};
-//dogs.Add(new Horse(4, "Hybrid", 150, "uknown", 200));
